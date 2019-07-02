@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TodoItemComponent implements OnInit {
 
   @Input() data: any;
-
   constructor() { }
 
   ngOnInit() {
