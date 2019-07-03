@@ -1,0 +1,44 @@
+<form #form="ngForm">
+  {{ todo | json}}
+  <br>
+  Descrição:
+  <input type="text"
+    name="description"
+    [(ngModel)]="todo.description"
+    #descricao="ngModel"
+    required>
+  <div *ngIf="descricao.errors && descricao.touched">
+    <div *ngIf="descricao?.errors.required">
+      Descrição é obrigatória
+    </div>
+  </div><br>
+  Titulo:
+  <input type="text"
+  name="title"
+  [(ngModel)]="todo.title"
+  #titulo="ngModel"
+  required>
+  <div *ngIf="titulo.errors && titulo.touched">
+    <div *ngIf="titulo?.errors.required">
+      Titulo é obrigatório
+    </div>
+  </div><br>
+  Data:
+  <input type="date"
+  name="date"
+  [(ngModel)]="todo.date"
+  #data="ngModel"
+  required>
+  <div *ngIf="data.errors && data.touched">
+    <div *ngIf="data?.errors.required">
+      Data é obrigatória
+    </div>
+  </div><br>
+  Finalizado?
+  <input name="fineshed" type="checkbox" [(ngModel)]="todo.finished">
+  <br><br>
+  <button [disabled]="form.invalid" (click)="enviar()">
+    Enviar
+  </button>
+</form>
+<br>
