@@ -1,23 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Hello Word!
-  </h1>
-  <i>{{ title }}</i>
-  <br><br>
 
 <app-contador></app-contador>
-
-</div>
+<div>App: {{ contador }}</div>
+<app-contador-botoes></app-contador-botoes>
 <br><br>
-<div style="text-align:center">
-<button (click)="novoItem()" class="btn btn-primary">Novo Item</button>
-</div>
-<ul>
-  <li *ngFor="let item of items">
-    <app-todo-item [data]="item"></app-todo-item>
-  </li>
-</ul>
-
-
+<a routerLink="/">Home</a> |
+<a routerLink="/todos">Todos</a>
+<br><br>
+<router-outlet></router-outlet>
 
