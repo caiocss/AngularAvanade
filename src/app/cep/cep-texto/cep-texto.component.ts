@@ -13,7 +13,6 @@ export class CepTextoComponent implements OnInit {
   constructor(private cepService: CepService) { }
 
   ngOnInit() {
-
   }
 
   buscarCep() {

@@ -1,4 +1,3 @@
-import { Todo } from './../../typings/Todo';
 import { CepService } from './../cep.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
